@@ -41,7 +41,7 @@ export const Admin = () => {
                                 <td>{elemet.name}</td>
                                 <td>{elemet.money}</td>
                                 <td>
-                                    <Link to='/Edit'><button className='btn btn-primary'>Edit</button></Link></td>
+                                    <Link to={'/Edit/'+elemet.id}><button className='btn btn-primary'>Edit</button></Link></td>
                                 <td><button onClick={() => deletegeetchange(elemet.id)} className='btn btn-primary'>Delete</button></td>
                             </tr>
                         )

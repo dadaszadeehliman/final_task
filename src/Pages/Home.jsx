@@ -7,7 +7,7 @@ export const Home = () => {
     useEffect((data) => {
         axios.get('http://localhost:8000/alveer/', data)
             .then(res => setgetdata(res.data))
-    }, [getdata])
+    }, [])
 
     return (
         <>
