@@ -27,7 +27,7 @@ function Navbar() {
                 </div>
             </div>
             <div className='Navbar_esas_reaponsivlik mt-5'>
-                <div><IoMenuSharp /></div>
+                <div><button className='btn'><IoMenuSharp /></button></div>
                 <div className='Navbar_esas_logo'> <h2><img src="https://preview.colorlib.com/theme/aranoz/img/logo.png" alt="logo" /></h2></div>
                 <div className='Navbar_esas_icons'>
                     <FaSearch />

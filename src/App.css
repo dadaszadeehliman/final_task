@@ -54,6 +54,10 @@
   background-color: aqua;
   padding: 150px;
 }
+.Home_section_1 img{
+  width: 100%;
+  height: 100%;
+}
 
 
 .Home_section_2 h1{
@@ -65,9 +69,58 @@
 .Home_section_2_1{
   transform: translateY(20%);
 }
+.Home_section_2 img{
+  width: 100%;
+  height: 100%;
+}
 
 
 .Home_section_3_next{
   display: flex;
   justify-content: flex-end;
+}
+
+.Home_section_3_data h2,p{
+  text-align: center;
+
+}
+
+.Home_section_4{
+  width: 100%;
+  height: 70vh;
+  background-image: url(https://preview.colorlib.com/theme/aranoz/img/subscribe_area.png.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.Home_section_4{
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+
+}
+.Home_section_4 h5,h2{
+  text-align: center;
+}
+.Home_section_4_esas{
+  margin-left: 25% !important;
+}
+
+
+.Home_section_5_esas{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 15px;
+  justify-content: center;
+}
+
+.Foter_lists ul li{
+  list-style-type: none;
+  margin: 10px 0;
+}
+.Foter_lists ul{
+  padding: 0;
+}
+.Foter h5{
+  text-align: center;
 }

@@ -3,6 +3,10 @@ import './App.css'
 import Layout from './layout/Layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Home } from './Pages/Home'
+import { Admin } from './Pages/Admin'
+import  Add  from './Pages/Add'
+import { Edit } from './Pages/Edit'
+
 
 function App() {
   return (
@@ -10,7 +14,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index  element={<Home />} />
+          <Route path='/Admin' element={<Admin />}/>
+          <Route path='/Add' element={<Add />}/>
+          <Route path='/Edit' element={<Edit />} />
         </Route>
+       
       </Routes>
 
     </>

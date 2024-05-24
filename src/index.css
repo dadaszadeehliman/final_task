@@ -3,3 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+table,thead,tbody,th,tr,td{
+    border: 1px solid blueviolet;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+table{
+    margin: 0 auto;
+}
+.datagetiimg{
+    width:50%;
+}
+
+.form label{
+    display: block;
+    margin: 20px 0;
+}
+.add_esas{
+    display: flex;
+    justify-content: center;
+}
+.add{
+    background-color: aqua;
+    width: 60%;
+    padding: 50px;
+}
