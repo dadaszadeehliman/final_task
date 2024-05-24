@@ -19,6 +19,7 @@ function Navbar() {
                             <li><Link to='/'>Blog</Link></li>
                             <li><Link to='/'>Contact</Link></li>
                             <li><Link to='/Admin'>Admin</Link></li>
+                            <li><Link to='/Favorit'>Favoritler</Link></li>
                         </ul>
                     </div>
                     <div className='Navbar_esas_icons'>
