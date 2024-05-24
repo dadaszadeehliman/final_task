@@ -1,8 +1,10 @@
+.navbar_bacgraundreng{
+  background-color: aqua;
+}
 .Navbar_esas{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: aqua;
 }
 .Navbar_esas_lists{
   display: flex;

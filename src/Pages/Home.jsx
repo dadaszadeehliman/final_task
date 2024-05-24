@@ -11,14 +11,14 @@ export const Home = () => {
 
     return (
         <>
-            <div className='Home_section_1 mt-5'>
+            <div className='Home_section_1 pt-5'>
                 <div className='container row'>
-                    <div className='col-lg-6'>
+                    <div className='col-lg-4 col-md-6 mt-5'>
                         <h1>Cloth & Wood Sofa</h1>
                         <p>Incididunt ut labore et dolore magna aliqua quis ipsum suspendisse ultrices gravida. Risus commodo viverra</p>
-                        <a href="#" className="btn btn-primary">Buy Now</a>
+                        <a href="#" className="btn btn-primary text-center">Buy Now</a>
                     </div>
-                    <div className='col-lg-6 mt-5'>
+                    <div className='col-lg-8 col-md-6 col-sm-none mt-5'>
                         <img src="https://preview.colorlib.com/theme/aranoz/img/banner_img.png" className='divan' alt="divan" />
                     </div>
                 </div>

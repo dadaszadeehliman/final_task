@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Home } from './Pages/Home'
 import { Admin } from './Pages/Admin'
 import  Add  from './Pages/Add'
-import { Edit } from './Pages/Edit'
+import  Edit  from './Pages/Edit'
+import { Favorit } from './Pages/Favorit'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path='/Admin' element={<Admin />}/>
           <Route path='/Add' element={<Add />}/>
           <Route path='/Edit/:id' element={<Edit />} />
+          <Route path='/Favorit' element={<Favorit />} />
         </Route>
        
       </Routes>

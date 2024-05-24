@@ -16,11 +16,13 @@ export default function Add() {
         register,
         handleSubmit,
         formState: { errors },
+        reset
     } = useForm()
 
 
     const onSubmit = (data) => {
         axios.post('http://localhost:8000/alveer', { ...data, img: postget })
+        reset()
     }
     return (
         <div className="add container mt-5">
