@@ -3,25 +3,25 @@
     {
       "img": "https://preview.colorlib.com/theme/aranoz/img/product/product_2.png",
       "name": "Quartz Belt Watch",
-      "money": "150.00",
+      "money": 180,
       "id": 1
     },
     {
       "img": "https://preview.colorlib.com/theme/aranoz/img/product/product_2.png",
-      "name": "Quartz Belt Watch",
-      "money": "150.00",
+      "name": "Almaz stolu",
+      "money": 250,
       "id": 2
     },
     {
       "img": "https://preview.colorlib.com/theme/aranoz/img/product/product_2.png",
-      "name": "Quartz Belt Watch",
-      "money": "150.00",
+      "name": "Demir stol",
+      "money": 250,
       "id": 3
     },
     {
       "img": "https://preview.colorlib.com/theme/aranoz/img/product/product_2.png",
       "name": "Quartz Belt Watch",
-      "money": "150.00",
+      "money": 150,
       "id": 4
     }
   ],
@@ -29,14 +29,20 @@
     {
       "img": "https://preview.colorlib.com/theme/aranoz/img/product/product_2.png",
       "name": "Quartz Belt Watch",
-      "money": "150.00",
-      "id": 2
+      "money": 180,
+      "id": 1
+    },
+    {
+      "img": "https://preview.colorlib.com/theme/aranoz/img/product/product_2.png",
+      "name": "Demir stol",
+      "money": 250,
+      "id": 3
     },
     {
       "img": "https://preview.colorlib.com/theme/aranoz/img/product/product_2.png",
       "name": "Quartz Belt Watch",
-      "money": "150.00",
-      "id": 3
+      "money": 150,
+      "id": 4
     }
   ]
 }

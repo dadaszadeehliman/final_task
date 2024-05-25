@@ -6,8 +6,8 @@ import { FcLike } from "react-icons/fc";
 
 export const Admin = () => {
     const [dataget, setdataget] = useState([])
-    // const [search, setsearch] = useState("")
-    // const [filter, setfilter] = useState("normal")
+    const [search, setsearch] = useState("")
+    const [filter, setfilter] = useState("normal")
 
     useEffect((data) => {
         fetch('http://localhost:8000/alveer/', data)
@@ -25,9 +25,18 @@ export const Admin = () => {
         )
     }
 
-    // const serachdata=()=>{
-    //     return dataget.filter(inf => inf.name.toUpperCase().startsWith(value.toUpperCase()))  
-    // }
+    const serachdata = () => {
+        let cardFiltered;
+        if(filter =='artan'){
+            cardFiltered=dataget.toSorted((a,b)=>Number(a.money)-Number(b.money))
+        }else if(filter=='azalan'){
+            cardFiltered=dataget.toSorted((a,b)=>b.money-a.money)
+        }else{
+            cardFiltered=[...dataget]
+        }
+        return cardFiltered.filter(inf => inf.name.toUpperCase().startsWith(search.toUpperCase()))
+    }
+    let cards=serachdata()
 
     return (
         <>
@@ -35,14 +44,14 @@ export const Admin = () => {
                 <Link to='/Add' className='btn btn-primary m-3'>Add</Link>
             </div>
 
-            {/* <div className='container searcadmin'>
-                <input type="text" placeholder='Search'  onInput={(e)=>setsearch(e.target.value)} />
+            <div className='container searcadmin'>
+                <input type="text" placeholder='Search Name' onInput={(e) => setsearch(e.target.value)} />
                 <select className='p-1'>
                     <option value="normal">Normal</option>
                     <option value="artan">Artan</option>
                     <option value="azalan">Azalan</option>
                 </select>
-            </div> */}
+            </div>
 
             <table className='mt-2'>
 
@@ -58,7 +67,7 @@ export const Admin = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {dataget.map(elemet => {
+                    {cards.map(elemet => {
                         return (
                             <tr key={elemet.id}>
                                 <td>{elemet.id}</td>

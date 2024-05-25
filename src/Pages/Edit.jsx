@@ -10,7 +10,7 @@ export default function Edit() {
    useEffect(() => {
      fetch('http://localhost:8000/alveer/'+id)
     .then(res=>res.json())
-    .then(editdata=>seteditdata(editdata))
+    .then((editdata)=>{seteditdata(editdata); setpostget(editdata.img)})
    }, [])
    
     const [postget, setpostget] = useState(null)
@@ -18,7 +18,7 @@ export default function Edit() {
         if (!file) return;
         const reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onload = (e) => setpostget(reader.result)
+        reader.onload = () => setpostget(reader.result)
     }
     const {
         register,
@@ -28,7 +28,7 @@ export default function Edit() {
 
 
     const onSubmit = (data) => {
-        axios.patch('http://localhost:8000/alveer/'+id, { ...data, img: postget })
+        axios.patch('http://localhost:8000/alveer/'+id, { ...data, img: postget, })
     }
     return (
         <div className="add container mt-5">
@@ -36,13 +36,14 @@ export default function Edit() {
             <div className="add_esas">
                 <form onSubmit={handleSubmit(onSubmit)} className="form">
                     <label>Img:
-                        <input type="file" name="img"  onInput={(e) => convertToBase64(e.target.files[1])}/>
+                        <input type="file" name="img"  onInput={(e) => PostgetElement(e.target.files[0])}/>
+                        {postget && <img src={postget} width='80px' height='80px' />}
                     </label>
                     <label>Name:
                         <input {...register("name")} defaultValue={editdata.name} />
                     </label>
                     <label>Money:
-                        <input {...register("money", { required: true })} defaultValue={editdata.money} />
+                        <input {...register("money", { required: true, valueAsNumbe:true  })} defaultValue={editdata.money} />
                     </label>
                     {errors.exampleRequired && <span>This field is required</span>}
                     <div className="row">

@@ -31,12 +31,13 @@ export default function Add() {
                 <form onSubmit={handleSubmit(onSubmit)} className="form">
                     <label>Img:
                         <input type="file" name="img" onChange={(e) => PostgetElement(e.target.files[0])} />
+                        {postget && <img src={postget} width='100px' height='100px' />}
                     </label>
                     <label>Name:
                         <input {...register("name")} />
                     </label>
                     <label>Money:
-                        <input {...register("money", { required: true })} />
+                        <input {...register("money", { required: true, valueAsNumbe:true })} />
                     </label>
                     {errors.exampleRequired && <span>This field is required</span>}
                     <div className="row">
